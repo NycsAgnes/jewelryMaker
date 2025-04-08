@@ -15,6 +15,7 @@ public class NaturalStone {
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
+
     }
 
     public String getNaturalStoneName() {

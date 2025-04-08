@@ -6,8 +6,17 @@ public class Options {
         this.color = "silver";
     }
 
-    public String silverColor = "silver";
-    public String ancientSilverColor = "ancient silver";
+    public void ancientSilverColor (String color){
+        this.color = "ancient silver";
+    }
+
+    public void antiqueSilverColor (String color){
+        this.color = "antique silver";
+    }
+
+
+//    public String silverColor = "silver";
+//    public String ancientSilverColor = "ancient silver";
     public String antiqueSilverColor = "antique silver";
     public String goldColor = "gold";
     public String ancientGoldColor = "ancient gold";

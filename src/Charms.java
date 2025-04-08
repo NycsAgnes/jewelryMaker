@@ -3,7 +3,7 @@ import java.util.Objects;
 public class Charms {
 
     private String charmName;
-    String charmColor = String.valueOf(new Options());
+//    String charmColor = ;
     private String charmMaterial;
     private double bulkPrice;
     private int piecesPerBulk;
@@ -27,14 +27,14 @@ public class Charms {
         return this;
     }
 
-    public String getCharmColor() {
-        return charmColor;
-    }
-
-    public Charms setCharmColor(String charmColor) {
-        this.charmColor = charmColor;
-        return this;
-    }
+//    public String getCharmColor() {
+//        return charmColor;
+//    }
+//
+//    public Charms setCharmColor(String charmColor) {
+//        this.charmColor = charmColor;
+//        return this;
+//    }
 
     public String getCharmMaterial() {
         return charmMaterial;
@@ -67,15 +67,15 @@ public class Charms {
         return pricePerPiece;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Charms charms)) return false;
-        return Objects.equals(getCharmName(), charms.getCharmName()) && Objects.equals(getCharmColor(), charms.getCharmColor()) && Objects.equals(getCharmMaterial(), charms.getCharmMaterial());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getCharmName(), getCharmColor(), getCharmMaterial());
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (!(o instanceof Charms charms)) return false;
+//        return Objects.equals(getCharmName(), charms.getCharmName()) && Objects.equals(getCharmColor(), charms.getCharmColor()) && Objects.equals(getCharmMaterial(), charms.getCharmMaterial());
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getCharmName(), getCharmColor(), getCharmMaterial());
+//    }
 }
 
