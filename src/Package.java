@@ -1,38 +1,31 @@
-import java.util.Objects;
+public class Package extends Component {
 
-public class Package {
 
-    private String packageName;
-    private String packageMaterial;
-    private String packageSize;
-    private double bulkPrice;
-    private int piecesPerBulk;
-    private double pricePerPiece;
-
-    public Package(String packageName, String packageMaterial, String packageSize, double bulkPrice, int piecesPerBulk) {
-        this.packageName = packageName;
-        this.packageMaterial = packageMaterial;
+    public Package(String name, Material material, String packageSize, double bulkPrice, int piecesPerBulk) {
+        this.name = name;
+        this.material = material;
         this.packageSize = packageSize;
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
+        Storage.add(this);
     }
 
-    public String getPackageName() {
-        return packageName;
+    public String getName() {
+        return name;
     }
 
-    public Package setPackageName(String packageName) {
-        this.packageName = packageName;
+    public Package setName(String packageName) {
+        this.name = name;
         return this;
     }
 
-    public String getPackageMaterial() {
-        return packageMaterial;
+    public Material getMaterial() {
+        return material;
     }
 
-    public Package setPackageMaterial(String packageMaterial) {
-        this.packageMaterial = packageMaterial;
+    public Package setMaterial(Material material) {
+        this.material = material;
         return this;
     }
 
@@ -64,17 +57,7 @@ public class Package {
     }
 
     public double getPricePerPiece() {
-        return pricePerPiece;
+        return this.pricePerPiece;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Package aPackage)) return false;
-        return Objects.equals(getPackageName(), aPackage.getPackageName()) && Objects.equals(getPackageMaterial(), aPackage.getPackageMaterial()) && Objects.equals(getPackageSize(), aPackage.getPackageSize());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getPackageName(), getPackageMaterial(), getPackageSize());
-    }
 }
