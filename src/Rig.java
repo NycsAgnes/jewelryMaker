@@ -6,7 +6,6 @@ public class Rig extends Component {
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
-        storage.add(this);
     }
 
     public String getName() {

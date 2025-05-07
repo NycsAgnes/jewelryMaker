@@ -1,6 +1,9 @@
 import java.util.*;
 
 public class Main {
+
+    private static final ArrayList <Component> storage = new ArrayList<>();
+
     public static void main(String[] args) {
 
         Scanner jeweller = new Scanner(System.in);
@@ -11,7 +14,9 @@ public class Main {
 
 // Ásvány gyöngyök
         Component aqua6 = new Bead("aquamarine", 6, 831.5, 57);
+        storage.add(aqua6);
         Component aqua8 = new Bead("aquamarine", 8, 983.38, 42);
+        storage.add(aqua8);
         Component tourmalinejade8 = new Bead("tourmalineJade", 8, 828.21, 45);
         Component obsidian8 = new Bead("blackObsidian", 8, 901.79, 45);
         Component garnet6 = new Bead("garnet", 6, 985.27, 61);
@@ -31,8 +36,6 @@ public class Main {
         Component pictureJasper8 = new Bead("pictureJasper", 8, 1310.79, 45);
         Component cracked8 = new Bead("crackedWhiteStone", 8, 1106.17, 45);
 
-        ;
-
 // Medálok
         Component gummyBears = new Charm("gummyBears", Color.MIXED, Material.RESIN, 755.57, 20);
         Component gummyHearts = new Charm("gummyHearts", Color.MIXED, Material.RESIN, 755.57, 20);
@@ -41,13 +44,9 @@ public class Main {
         Component toolCharms = new Charm("toolCharms", Color.SILVER, Material.METAL, 706.72, 20);
         Component smallButterfly = new Charm("smallButterfly", Color.MIXED, Material.ALLOY, 878.06, 50);
 
-        ;
-
 // Akasztók
         Component smallRoundSilver = new PendantConnector("smallRoundSilver", Color.SILVER, Material.STEEL, 756.43, 30);
         Component smallRoundGold = new PendantConnector("smallRoundGold", Color.GOLD, Material.STEEL, 832.45, 30);
-
-        ;
 
 // Szerelékek
         Component earringRings = new Rig("earringRings", Color.SILVER, 755.57, 50);
@@ -59,35 +58,28 @@ public class Main {
         Component steelBallPin25mm = new Rig("steelBallPin25mm", Color.SILVER, 706.72, 100);
         Component flatHeadPin50mm = new Rig("flatHeadPin50mm", Color.SILVER, 927.82, 200);
 
-        ;
-
 // Köztesek
         Component smallSquareBeads = new Spacer("smallSquareBeads", Color.SILVER, 795.68, 800);
         Component rondelle7 = new Spacer("rondelle", Color.SILVER, 627.76, 100);
         Component metalKnot = new Spacer("metalKnot", Color.SILVER, 655.4, 20);
 
-        ;
-
 // Csomagolóanyagok
         Component brownFolding = new Package("brownFolding", Material.PAPER, "4,5cm*12cm", 706.72, 50);
         Component BagWithThankYou = new Package("BagWithThankYou", Material.PLASTIC, "10cm*10cm", 706.72, 100);
 
-        ;
-
 // Raktár
-        ArrayList <Component> storage = new ArrayList<>();
 
-        public void addToStorage (Component){
-            storage.add(Component)
-        }
+
+
 
 
 // Product factory
         String exit = "exit";
         double productBasePrice = 0;
         double productMinimumSellingPrice = 0;
+        int i = 0;
+
         while (!Objects.equals(jeweller.nextLine(), exit)){
-            int i = 0;
             System.out.println("Add meg az " + i + ". alkatrész nevét!");
             String component = jeweller.nextLine();
             System.out.println("Hány darabot használtál fel belőle?");
@@ -112,4 +104,5 @@ public class Main {
 
 
     }
+
 }

@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Bead extends Component {
 
@@ -9,7 +7,6 @@ public class Bead extends Component {
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
-        storage.add(this);
     }
 
     public String getName() {
