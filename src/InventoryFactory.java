@@ -4,6 +4,7 @@ public class InventoryFactory {
         Component aqua6 = new Bead("aquamarine6", 6, 831.5, 57);
         storage.addToStorage(aqua6);
         Component aqua8 = new Bead("aquamarine8", 8, 983.38, 42);
+        //TODO mindent bepakolni a storage-be
         Component tourmalinejade8 = new Bead("tourmalineJade8", 8, 828.21, 45);
         Component obsidian8 = new Bead("blackObsidian8", 8, 901.79, 45);
         Component garnet6 = new Bead("garnet6", 6, 985.27, 61);
