@@ -7,7 +7,7 @@ public class PendantConnector extends Component{
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
-        ;
+        addToStorage();
     }
 
     public String getName() {
@@ -42,6 +42,10 @@ public class PendantConnector extends Component{
     public PendantConnector setPiecesPerBulk(int piecesPerBulk) {
         this.piecesPerBulk = piecesPerBulk;
         return this;
+    }
+
+    public void addToStorage (){
+        Main.storage.add(this);
     }
 
 }

@@ -8,29 +8,31 @@ public class Package extends Component {
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
-
+        addToStorage();
     }
 
     public String getName() {
         return name;
     }
 
-    public Package setName(String packageName) {
-        this.name = name;
-        return this;
-    }
-
     public Material getMaterial() {
         return material;
     }
 
-    public Package setMaterial(Material material) {
-        this.material = material;
-        return this;
-    }
-
     public String getPackageSize() {
         return packageSize;
+    }
+
+    public double getBulkPrice() {
+        return bulkPrice;
+    }
+
+    public int getPiecesPerBulk() {
+        return piecesPerBulk;
+    }
+
+    public double getPricePerPiece() {
+        return this.pricePerPiece;
     }
 
     public Package setPackageSize(String packageSize) {
@@ -38,17 +40,9 @@ public class Package extends Component {
         return this;
     }
 
-    public double getBulkPrice() {
-        return bulkPrice;
-    }
-
     public Package setBulkPrice(double bulkPrice) {
         this.bulkPrice = bulkPrice;
         return this;
-    }
-
-    public int getPiecesPerBulk() {
-        return piecesPerBulk;
     }
 
     public Package setPiecesPerBulk(int piecesPerBulk) {
@@ -56,8 +50,8 @@ public class Package extends Component {
         return this;
     }
 
-    public double getPricePerPiece() {
-        return this.pricePerPiece;
+    public void addToStorage (){
+        Main.storage.add(this);
     }
 
 

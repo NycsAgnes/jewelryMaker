@@ -6,38 +6,30 @@ public class Spacer extends Component {
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
-        ;
+        addToStorage();
     }
 
     public String getName() {
         return name;
     }
 
-    public Spacer setName(String spacerName) {
-        this.name = name;
-        return this;
-    }
-
     public Color getColor() {
         return color;
-    }
-
-    public Spacer setColor(Color color) {
-        this.color = color;
-        return this;
     }
 
     public double getBulkPrice() {
         return bulkPrice;
     }
 
+    public int getPiecesPerBulk() {
+        return piecesPerBulk;
+    }
+
+    public double getPricePerPiece() {return pricePerPiece;}
+
     public Spacer setBulkPrice(double bulkPrice) {
         this.bulkPrice = bulkPrice;
         return this;
-    }
-
-    public int getPiecesPerBulk() {
-        return piecesPerBulk;
     }
 
     public Spacer setPiecesPerBulk(int piecesPerBulk) {
@@ -45,8 +37,8 @@ public class Spacer extends Component {
         return this;
     }
 
-    public double getPricePerPiece() {
-        return pricePerPiece;
+    public void addToStorage (){
+        Main.storage.add(this);
     }
 
 
