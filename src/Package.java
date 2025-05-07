@@ -1,4 +1,4 @@
-public class Package extends Component implements Storage{
+public class Package extends Component {
 
 
     public Package(String name, Material material, String packageSize, double bulkPrice, int piecesPerBulk) {
@@ -8,7 +8,6 @@ public class Package extends Component implements Storage{
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
-        storage.add(this);
     }
 
     public String getName() {
@@ -60,8 +59,4 @@ public class Package extends Component implements Storage{
         return this.pricePerPiece;
     }
 
-    @Override
-    public void addToStorage() {
-
-    }
 }
