@@ -1,6 +1,9 @@
 import java.util.*;
 
 public class Main {
+
+    public static final ArrayList <Component> storage = new ArrayList<>();
+
     public static void main(String[] args) {
 
         Scanner jeweller = new Scanner(System.in);
@@ -74,31 +77,32 @@ public class Main {
 
         ;
 
-// Raktár
-        ArrayList <Component> storage = new ArrayList<>();
+
+        System.out.println((storage));
 
 
 // Product factory
-        String exit = "exit";
-        double productBasePrice = 0;
-        double productMinimumSellingPrice = 0;
-        while (!Objects.equals(jeweller.nextLine(), exit)){
-            int i = 0;
-            System.out.println("Add meg az " + i + ". alkatrész nevét!");
-            String component = jeweller.nextLine();
-            System.out.println("Hány darabot használtál fel belőle?");
-            int pieces = jeweller.nextInt();
-            for (int j = 0; j < storage.toArray().length; j++) {
-                if (component.equals(storage.get(j).name)){
-                    productBasePrice += (double) (storage.get(j).pricePerPiece * pieces);
-                }
-            }
-            i++;
-        }
-        productMinimumSellingPrice = productBasePrice * 3;
-
-        System.out.println("A termék bekerülési költsége: " + productBasePrice);
-        System.out.println("A termék ajánlott fogyasztói ára: " + productMinimumSellingPrice);
+//        String exit = "exit";
+//        double productBasePrice = 0;
+//        double productMinimumSellingPrice = 0;
+//        int i = 1;
+//        while (!Objects.equals(jeweller.nextLine(), exit)){
+//            System.out.println("Add meg az " + i + ". alkatrész nevét!");
+//            String component = jeweller.nextLine();
+//            System.out.println("Hány darabot használtál fel belőle?");
+//            int pieces = jeweller.nextInt();
+//            for (int j = 0; j < storage.toArray().length; j++) {
+//                if (component.equals(storage.get(j).name)){
+//                    productBasePrice += (double) (storage.get(j).pricePerPiece * pieces);
+//                }
+//            }
+//            i++;
+//
+//        }
+//        productMinimumSellingPrice = productBasePrice * 3;
+//
+//        System.out.println("A termék bekerülési költsége: " + productBasePrice);
+//        System.out.println("A termék ajánlott fogyasztói ára: " + productMinimumSellingPrice);
 
 
 
