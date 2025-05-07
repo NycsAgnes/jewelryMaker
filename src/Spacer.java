@@ -6,7 +6,6 @@ public class Spacer extends Component {
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
-        addToStorage();
     }
 
     public String getName() {
@@ -37,9 +36,7 @@ public class Spacer extends Component {
         return this;
     }
 
-    public void addToStorage (){
-        Main.storage.add(this);
-    }
+
 
 
 }

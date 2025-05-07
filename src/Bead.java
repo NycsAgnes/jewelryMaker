@@ -3,13 +3,11 @@ import java.util.List;
 
 public class Bead extends Component {
 
+    private int beadSize;
+
     public Bead (String name, int beadSize, double bulkPrice, int piecesPerBulk) {
-        this.name = name;
+        super(name, piecesPerBulk, bulkPrice);
         this.beadSize = beadSize;
-        this.bulkPrice = bulkPrice;
-        this.piecesPerBulk = piecesPerBulk;
-        this.pricePerPiece = bulkPrice / piecesPerBulk;
-        addToStorage();
     }
 
     public String getName() {
@@ -42,8 +40,5 @@ public class Bead extends Component {
         return this;
     }
 
-    public void addToStorage (){
-        Main.storage.add(this);
-    }
 
 }

@@ -7,7 +7,6 @@ public class Charm extends Component {
         this.bulkPrice = bulkPrice;
         this.piecesPerBulk = piecesPerBulk;
         this.pricePerPiece = bulkPrice / piecesPerBulk;
-        addToStorage();
     }
 
     public String getName() {return name;}
@@ -38,9 +37,6 @@ public class Charm extends Component {
         return this;
     }
 
-    public void addToStorage (){
-        Main.storage.add(this);
-    }
 
 
 }
